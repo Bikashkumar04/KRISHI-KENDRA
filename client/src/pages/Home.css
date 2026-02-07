@@ -49,6 +49,103 @@
   padding: 0 2rem;
 }
 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-header .section-title {
+  margin-bottom: 0;
+}
+
+.weather-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gps-button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.gps-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.3);
+}
+
+.gps-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.gps-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.clear-location-button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+.clear-location-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.3);
+}
+
+.clear-location-button:active {
+  transform: scale(0.98);
+}
+
+.error-message {
+  background: #fadbd8;
+  border-left: 4px solid #e74c3c;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #c0392b;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  animation: slideDown 0.3s ease;
+}
+
+.location-info {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-top: 0.3rem;
+}
+
+.storage-info {
+  text-align: center;
+  padding: 1rem;
+  background: #e8f8f5;
+  border-radius: 8px;
+  color: #27ae60;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -435,6 +532,17 @@
   }
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -483,6 +591,27 @@
     font-size: 1.2rem;
   }
 
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-header .section-title {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .weather-actions {
+    width: 100%;
+  }
+
+  .gps-button,
+  .clear-location-button {
+    flex: 1;
+    min-width: 140px;
+  }
+
   .weather-main {
     flex-direction: column;
     gap: 1.5rem;
@@ -516,6 +645,28 @@
 @media (max-width: 480px) {
   .hero-section {
     padding: 2rem 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .weather-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .gps-button,
+  .clear-location-button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .error-message {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
   }
 
   .hero-title {
