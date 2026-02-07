@@ -1,0 +1,187 @@
+.price-cards-section {
+  margin-bottom: 2rem;
+}
+
+.price-cards-section h3 {
+  font-size: 1.4rem;
+  color: #27ae60;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.price-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.price-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid #f0f0f0;
+}
+
+.price-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  border-color: #2ecc71;
+}
+
+.card-header {
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 4px solid #2ecc71;
+}
+
+.commodity-emoji {
+  font-size: 2.5rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.card-title-section {
+  flex: 1;
+}
+
+.commodity-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.3rem 0;
+}
+
+.market-name {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-body {
+  padding: 1.2rem;
+  border-top: 1px solid #ecf0f1;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.price-row.highlight {
+  background: #f0fdf4;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #2ecc71;
+  margin: 0.5rem 0;
+}
+
+.price-row.date-row {
+  border-bottom: none;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.price-value.min {
+  color: #e74c3c;
+}
+
+.price-value.max {
+  color: #27ae60;
+}
+
+.price-value.modal {
+  color: #2980b9;
+  font-size: 1.2rem;
+}
+
+.price-value.date {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.card-footer {
+  padding: 0.8rem 1.2rem;
+  background: #f8f9fa;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.state-badge,
+.district-badge {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: white;
+}
+
+.state-badge {
+  background: #2ecc71;
+}
+
+.district-badge {
+  background: #3498db;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .price-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .card-header {
+    padding: 1rem;
+  }
+
+  .commodity-emoji {
+    font-size: 2rem;
+  }
+
+  .commodity-name {
+    font-size: 1rem;
+  }
+
+  .market-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    padding: 0.8rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-footer {
+    padding: 0.6rem 1rem;
+  }
+}

@@ -1,0 +1,123 @@
+.today-details {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.today-details h3 {
+  font-size: 1.4rem;
+  color: #27ae60;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  border-bottom: 3px solid #2ecc71;
+  padding-bottom: 1rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-card {
+  background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-left: 4px solid #2ecc71;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card.humidity {
+  border-left-color: #3498db;
+}
+
+.detail-card.wind {
+  border-left-color: #e74c3c;
+}
+
+.detail-card.pressure {
+  border-left-color: #f39c12;
+}
+
+.detail-card.visibility {
+  border-left-color: #9b59b6;
+}
+
+.detail-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.detail-value {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.detail-help {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.4;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .today-details {
+    padding: 1.5rem;
+  }
+
+  .today-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .detail-card {
+    padding: 1rem;
+  }
+
+  .detail-icon {
+    font-size: 2rem;
+  }
+
+  .detail-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}

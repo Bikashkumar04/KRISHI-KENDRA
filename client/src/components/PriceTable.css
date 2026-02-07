@@ -1,0 +1,157 @@
+.price-table-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.price-table-section h3 {
+  font-size: 1.4rem;
+  color: #27ae60;
+  margin: 0 0 1.5rem 0;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.price-table thead {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.price-table th {
+  padding: 1rem;
+  text-align: left;
+  border: none;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.price-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.price-table th.sortable:hover {
+  background: #27ae60;
+}
+
+.price-table th.highlight {
+  background: #1e8449;
+  font-weight: 700;
+}
+
+.price-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background 0.2s ease;
+}
+
+.price-table tbody tr:hover {
+  background: #f0fdf4;
+}
+
+.price-table tbody tr.even {
+  background: #fafafa;
+}
+
+.price-table td {
+  padding: 0.9rem 1rem;
+  color: #333;
+}
+
+.price-table td.bold {
+  font-weight: 600;
+  color: #27ae60;
+}
+
+.price-table td.price-min {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.price-table td.price-max {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.price-table td.price-modal {
+  background: #f0fdf4;
+  border-left: 3px solid #2ecc71;
+  font-size: 1.05rem;
+  color: #2980b9;
+}
+
+.price-table td.date {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.table-footer {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 1px solid #ecf0f1;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.table-footer p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .price-table-section {
+    padding: 1.5rem;
+    overflow-x: auto;
+  }
+
+  .price-table {
+    font-size: 0.85rem;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 0.7rem 0.6rem;
+  }
+
+  /* Hide less important columns on mobile */
+  .price-table th:nth-child(2),
+  .price-table td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-table {
+    font-size: 0.8rem;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .price-table th:nth-child(4),
+  .price-table th:nth-child(5),
+  .price-table td:nth-child(4),
+  .price-table td:nth-child(5) {
+    display: none;
+  }
+}

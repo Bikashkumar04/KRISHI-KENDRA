@@ -1,0 +1,171 @@
+.forecast-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.forecast-section h3 {
+  font-size: 1.4rem;
+  color: #27ae60;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  border-bottom: 3px solid #2ecc71;
+  padding-bottom: 1rem;
+}
+
+.forecast-help {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem 0;
+  padding: 1rem;
+  background: #f0fdf4;
+  border-left: 3px solid #2ecc71;
+  border-radius: 4px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.forecast-card {
+  background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+  border: 2px solid #ecf0f1;
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.forecast-card:hover {
+  border-color: #2ecc71;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.15);
+  transform: translateY(-3px);
+}
+
+.forecast-day {
+  margin-bottom: 1rem;
+}
+
+.day-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.day-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.forecast-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0.5rem 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.forecast-temp {
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.temp-max {
+  font-size: 1.4rem;
+  color: #e74c3c;
+  margin-bottom: 0.2rem;
+}
+
+.temp-min {
+  font-size: 1rem;
+  color: #3498db;
+}
+
+/* Rain probability highlight */
+.rain-chance {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border: 2px solid #00bcd4;
+}
+
+.rain-label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.rain-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00bcd4;
+  transition: color 0.3s ease;
+}
+
+.rain-value.high {
+  color: #e74c3c;
+}
+
+/* Farming advice */
+.forecast-advice {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 0.6rem;
+  background: #fffacd;
+  border-radius: 6px;
+  margin-top: 0.8rem;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .forecast-section {
+    padding: 1.5rem;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .forecast-card {
+    padding: 1rem;
+  }
+
+  .forecast-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .forecast-card {
+    padding: 0.8rem;
+  }
+
+  .day-name {
+    font-size: 0.95rem;
+  }
+
+  .temp-max {
+    font-size: 1.2rem;
+  }
+
+  .rain-value {
+    font-size: 1.2rem;
+  }
+}

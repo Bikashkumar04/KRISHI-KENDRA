@@ -1,0 +1,185 @@
+.weather-summary {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.summary-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 1rem;
+}
+
+.location {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.update-time {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.summary-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.temperature-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.temp-info {
+  flex: 1;
+}
+
+.current-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.weather-condition {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.feels-like {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Rain probability section */
+.rain-alert {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #fff;
+}
+
+.rain-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rain-probability {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rain-bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.rain-fill {
+  height: 100%;
+  background: #3498db;
+  transition: width 0.3s ease;
+}
+
+.rain-percent {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: right;
+}
+
+.rain-warning {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #e74c3c;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.summary-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.min-max {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.min-max span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .weather-summary {
+    padding: 1.5rem;
+  }
+
+  .location {
+    font-size: 1.3rem;
+  }
+
+  .summary-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .temperature-section {
+    justify-content: center;
+  }
+
+  .current-temp {
+    font-size: 2.5rem;
+  }
+
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .rain-alert {
+    min-width: 100%;
+  }
+
+  .min-max {
+    flex-direction: column;
+    width: 100%;
+  }
+}
