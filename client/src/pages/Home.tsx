@@ -1,5 +1,6 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { getCurrentWeather } from '../services/weatherService.ts';
 import { WeatherData } from '../services/weatherService.ts';
 
@@ -24,6 +25,7 @@ interface StoredLocation {
 }
 
 function Home() {
+  const navigate = useNavigate();
   const [weather, setWeather] = useState<WeatherInfo | null>(null);
   const [loadingWeather, setLoadingWeather] = useState(true);
   const [gpsLoading, setGpsLoading] = useState(false);
@@ -318,7 +320,7 @@ function Home() {
       <section className="features-section">
         <h2 className="section-title">What We Offer</h2>
         <div className="features-grid">
-          <div className="feature-card">
+          <div className="feature-card" onClick={() => navigate('/mandi-price')} style={{ cursor: 'pointer' }}>
             <div className="feature-icon">📊</div>
             <h3>Live Mandi Prices</h3>
             <p>Get real-time agricultural market prices from across India. Track commodity prices for better selling decisions.</p>
@@ -329,7 +331,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="feature-card">
+          <div className="feature-card" onClick={() => navigate('/weather')} style={{ cursor: 'pointer' }}>
             <div className="feature-icon">🌦️</div>
             <h3>Weather Forecasts</h3>
             <p>Plan your farming activities with accurate 5-day weather forecasts including rainfall and wind predictions.</p>
@@ -340,7 +342,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="feature-card">
+          <div className="feature-card" onClick={() => navigate('/weather')} style={{ cursor: 'pointer' }}>
             <div className="feature-icon">📍</div>
             <h3>Location-Based Info</h3>
             <p>Get customized information specific to your location or search any city for weather and market data.</p>
@@ -351,7 +353,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="feature-card">
+          <div className="feature-card" onClick={() => navigate('/weather')} style={{ cursor: 'pointer' }}>
             <div className="feature-icon">🌱</div>
             <h3>Farming Insights</h3>
             <p>Get expert recommendations on crop irrigation, spraying, and seasonal guidance based on weather conditions.</p>
@@ -362,7 +364,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="feature-card">
+          <div className="feature-card" onClick={() => navigate('/government-schemes')} style={{ cursor: 'pointer' }}>
             <div className="feature-icon">🏛️</div>
             <h3>Government Schemes</h3>
             <p>Discover and apply for agricultural subsidies, loans, and schemes from Central & State governments.</p>
